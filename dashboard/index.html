@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Home Monitor — Student Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="setup-banner" class="banner hidden" role="status"></div>
+    <div id="alert-banner" class="banner banner-alert hidden" role="alert">
+      Gas / smoke reading is above the threshold. Buzzer should be ON in Auto mode.
+    </div>
+
+    <header class="top">
+      <div>
+        <p class="eyebrow">Student STEM project</p>
+        <h1>Smart Home</h1>
+        <p class="lede">Monitoring and automation dashboard</p>
+      </div>
+      <div class="status-stack">
+        <div class="pill" id="link-pill">Connecting…</div>
+        <p class="meta" id="last-update">Last update: —</p>
+      </div>
+    </header>
+
+    <main>
+      <section aria-labelledby="sensors-title">
+        <h2 id="sensors-title">Sensors</h2>
+        <div class="grid sensors">
+          <article class="card" id="card-temperature">
+            <p class="label">Temperature</p>
+            <p class="value"><span id="val-temperature">—</span><span class="unit"> °C</span></p>
+          </article>
+          <article class="card" id="card-humidity">
+            <p class="label">Humidity</p>
+            <p class="value"><span id="val-humidity">—</span><span class="unit"> %</span></p>
+          </article>
+          <article class="card" id="card-light">
+            <p class="label">Light level</p>
+            <p class="value"><span id="val-light">—</span><span class="unit"> ADC</span></p>
+          </article>
+          <article class="card" id="card-motion">
+            <p class="label">Motion</p>
+            <p class="value" id="val-motion">—</p>
+          </article>
+          <article class="card" id="card-gas">
+            <p class="label">Gas / smoke</p>
+            <p class="value" id="val-gas-status">—</p>
+            <p class="sub" id="val-gas">ADC —</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split">
+        <div>
+          <h2>Devices</h2>
+          <p class="hint" id="device-hint">
+            Device buttons work in Manual mode. In Auto mode they show the current state only.
+          </p>
+          <div class="grid devices">
+            <article class="card device">
+              <p class="label">Light</p>
+              <button class="toggle" data-device="light" aria-pressed="false">OFF</button>
+            </article>
+            <article class="card device">
+              <p class="label">Fan</p>
+              <button class="toggle" data-device="fan" aria-pressed="false">OFF</button>
+            </article>
+            <article class="card device">
+              <p class="label">Relay</p>
+              <button class="toggle" data-device="relay" aria-pressed="false">OFF</button>
+            </article>
+            <article class="card device">
+              <p class="label">Buzzer</p>
+              <button class="toggle" data-device="buzzer" aria-pressed="false">OFF</button>
+            </article>
+          </div>
+        </div>
+
+        <div>
+          <h2>Mode</h2>
+          <div class="mode-switch" role="group" aria-label="System mode">
+            <button id="btn-auto" type="button">AUTO</button>
+            <button id="btn-manual" type="button">MANUAL</button>
+          </div>
+          <p class="hint" id="mode-copy">
+            Auto: fan follows temperature, light follows darkness and motion, buzzer follows gas.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Thresholds</h2>
+        <p class="hint">These values live in Firebase <code>smart_home/settings</code>. The ESP32 reads them; they are not hard-coded in the main loop.</p>
+        <form id="settings-form" class="settings">
+          <label>
+            Temperature threshold (°C)
+            <input id="th-temperature" name="temperature_threshold" type="number" step="0.5" min="10" max="50" />
+          </label>
+          <label>
+            Light threshold (ADC, below = dark)
+            <input id="th-light" name="light_threshold" type="number" step="1" min="0" max="4095" />
+          </label>
+          <label>
+            Gas threshold (ADC)
+            <input id="th-gas" name="gas_threshold" type="number" step="1" min="0" max="4095" />
+          </label>
+          <label>
+            Motion hold (ms)
+            <input id="th-motion" name="motion_hold_ms" type="number" step="500" min="0" max="120000" />
+          </label>
+          <button type="submit" class="primary">Save thresholds</button>
+        </form>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Recent history</h2>
+          <button type="button" id="btn-csv" class="secondary">Download CSV</button>
+        </div>
+        <p class="hint">The ESP32 appends a snapshot about once per minute for later analysis.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Temp</th>
+                <th>Humidity</th>
+                <th>Light</th>
+                <th>Motion</th>
+                <th>Gas</th>
+              </tr>
+            </thead>
+            <tbody id="history-body">
+              <tr>
+                <td colspan="6">Waiting for history…</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Low-voltage classroom model. Not a production home-security system. No 220 V loads.</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

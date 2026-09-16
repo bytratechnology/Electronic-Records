@@ -1,0 +1,303 @@
+:root {
+  --paper: #f3efe6;
+  --ink: #1c2430;
+  --muted: #5c6b73;
+  --card: #fffdf8;
+  --line: #d9d1c3;
+  --teal: #0f6b5c;
+  --teal-dark: #0a4f44;
+  --ok: #2e7d4f;
+  --alert: #9b2c2c;
+  --warn: #8a5a12;
+  --shadow: 0 10px 30px rgba(28, 36, 48, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top right, #e7f0ea 0, var(--paper) 42%);
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.banner {
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  background: #dce8e4;
+}
+
+.banner-alert {
+  background: #f4d6d6;
+  color: var(--alert);
+  font-weight: 600;
+}
+
+.top,
+main,
+footer {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: flex-end;
+  padding: 2.2rem 0 1rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--teal);
+  margin: 0 0 0.35rem;
+}
+
+h1 {
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+
+.lede,
+.meta,
+.hint,
+.sub,
+footer {
+  color: var(--muted);
+}
+
+.lede {
+  margin: 0.35rem 0 0;
+}
+
+.status-stack {
+  text-align: right;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #dce8e4;
+  font-size: 0.85rem;
+}
+
+.pill.ok {
+  background: #d9eadf;
+  color: var(--ok);
+}
+
+.pill.bad {
+  background: #f4d6d6;
+  color: var(--alert);
+}
+
+.grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.sensors {
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.devices {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.value {
+  margin: 0.35rem 0 0;
+  font-size: 1.8rem;
+  font-weight: 650;
+}
+
+.unit {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.sub {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+}
+
+.card.alert {
+  border-color: #e3b6b6;
+  background: #fff6f6;
+}
+
+.card.motion {
+  border-color: #c9ddd6;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+}
+
+section {
+  margin: 1.6rem 0;
+}
+
+.hint {
+  margin: 0 0 0.9rem;
+  font-size: 0.92rem;
+}
+
+.toggle,
+.mode-switch button,
+.primary,
+.secondary {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.toggle[aria-pressed="true"],
+.mode-switch button.active {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+}
+
+.toggle:disabled,
+.mode-switch button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.device {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mode-switch {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.settings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.9rem;
+  align-items: end;
+}
+
+.settings label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+input {
+  font: inherit;
+  padding: 0.55rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.primary {
+  background: var(--teal);
+  color: #fff;
+  border-color: var(--teal-dark);
+}
+
+.secondary {
+  background: transparent;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+th,
+td {
+  padding: 0.7rem 0.85rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+footer {
+  padding: 1rem 0 2.5rem;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 800px) {
+  .top,
+  .split,
+  .section-head {
+    display: block;
+  }
+
+  .status-stack {
+    text-align: left;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "smart_home": {
+    "sensors": {
+      "temperature": 0,
+      "humidity": 0,
+      "motion": false,
+      "light": 0,
+      "gas": 0
+    },
+    "devices": {
+      "light": false,
+      "fan": false,
+      "relay": false,
+      "buzzer": false
+    },
+    "settings": {
+      "mode": "auto",
+      "temperature_threshold": 30,
+      "light_threshold": 1500,
+      "gas_threshold": 1800,
+      "motion_hold_ms": 10000
+    },
+    "system": {
+      "online": false,
+      "last_update": 0
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "smart_home": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  }
+}
