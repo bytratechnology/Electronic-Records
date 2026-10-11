@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "data_logger": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "readings": {
+        ".indexOn": ["ts"]
+      }
+    }
+  }
+}

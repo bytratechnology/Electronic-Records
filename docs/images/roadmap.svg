@@ -1,0 +1,51 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1040 470' width='1040' height='470' role='img' aria-label='Project roadmap'>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#495057'/></marker></defs>
+<rect width='1040' height='470' fill='#ffffff'/>
+<text x='520.0' y='30' font-family='Helvetica, Arial, sans-serif' font-size='17' text-anchor='middle' font-weight='bold' fill='#1c2733'>How the fourteen projects build on each other</text>
+<text x='135.0' y='72' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' font-weight='bold' fill='#5b6b7b'>Level 1 — basic electronics</text>
+<text x='395.0' y='72' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' font-weight='bold' fill='#5b6b7b'>Level 2 — IoT</text>
+<text x='655.0' y='72' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' font-weight='bold' fill='#5b6b7b'>Level 2 — cloud</text>
+<text x='915' y='72' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' font-weight='bold' fill='#5b6b7b'>Capstone</text>
+<rect x='830' y='96' width='170' height='354' rx='12' fill='#1c2733'/>
+<text x='915' y='265.0' font-family='Helvetica, Arial, sans-serif' font-size='14' text-anchor='middle' font-weight='bold' fill='#ffffff'>14 Smart Home</text>
+<text x='915' y='285.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#ffffff'>capstone</text>
+<line x1='243' y1='118.0' x2='286' y2='118.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<line x1='243' y1='180.0' x2='286' y2='180.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<line x1='243' y1='242.0' x2='286' y2='242.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<line x1='243' y1='304.0' x2='286' y2='304.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<line x1='243' y1='366.0' x2='286' y2='304.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<line x1='503' y1='118.0' x2='546' y2='118.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<line x1='503' y1='304.0' x2='546' y2='304.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<line x1='763' y1='118.0' x2='826' y2='118.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<line x1='503' y1='180.0' x2='826' y2='180.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<line x1='503' y1='242.0' x2='826' y2='242.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<line x1='763' y1='304.0' x2='826' y2='304.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<line x1='503' y1='366.0' x2='826' y2='366.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<line x1='503' y1='428.0' x2='826' y2='428.0' stroke='#495057' stroke-width='1.6' marker-end='url(#arrow)'/>
+<rect x='30' y='96' width='210' height='44' rx='10' fill='#fff4e6' stroke='#e8590c' stroke-width='1.5'/>
+<text x='135.0' y='123.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>01 Temperature monitor</text>
+<rect x='30' y='158' width='210' height='44' rx='10' fill='#fff4e6' stroke='#e8590c' stroke-width='1.5'/>
+<text x='135.0' y='185.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>02 Gas leak alarm</text>
+<rect x='30' y='220' width='210' height='44' rx='10' fill='#fff4e6' stroke='#e8590c' stroke-width='1.5'/>
+<text x='135.0' y='247.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>03 Fire alarm</text>
+<rect x='30' y='282' width='210' height='44' rx='10' fill='#fff4e6' stroke='#e8590c' stroke-width='1.5'/>
+<text x='135.0' y='309.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>04 Motion light</text>
+<rect x='30' y='344' width='210' height='44' rx='10' fill='#fff4e6' stroke='#e8590c' stroke-width='1.5'/>
+<text x='135.0' y='371.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>05 Ambient-light lamp</text>
+<rect x='290' y='96' width='210' height='44' rx='10' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='395.0' y='123.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>06 Online weather station</text>
+<rect x='290' y='158' width='210' height='44' rx='10' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='395.0' y='185.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>07 Internet gas alert</text>
+<rect x='290' y='220' width='210' height='44' rx='10' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='395.0' y='247.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>08 Real-time fire alert</text>
+<rect x='290' y='282' width='210' height='44' rx='10' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='395.0' y='309.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>09 Web smart light</text>
+<rect x='290' y='344' width='210' height='44' rx='10' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='395.0' y='371.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>10 Plant watering</text>
+<rect x='290' y='406' width='210' height='44' rx='10' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='395.0' y='433.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>11 RFID attendance</text>
+<rect x='550' y='96' width='210' height='44' rx='10' fill='#e6fcf5' stroke='#0ca678' stroke-width='1.5'/>
+<text x='655.0' y='123.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>13 Cloud data logging</text>
+<rect x='550' y='282' width='210' height='44' rx='10' fill='#e6fcf5' stroke='#0ca678' stroke-width='1.5'/>
+<text x='655.0' y='309.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>12 Web app control</text>
+</svg>

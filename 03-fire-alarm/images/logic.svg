@@ -1,0 +1,21 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 850 222' width='850' height='222' role='img' aria-label='03 — Latching alarm state machine'>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#495057'/></marker></defs>
+<rect width='850' height='222' fill='#ffffff'/>
+<text x='425.0' y='30' font-family='Helvetica, Arial, sans-serif' font-size='17' text-anchor='middle' font-weight='bold' fill='#1c2733'>03 — Latching alarm state machine</text>
+<rect x='40' y='80' width='120' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='100.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>MONITORING</text>
+<text x='100.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>green on</text>
+<rect x='310' y='80' width='175' height='74' rx='12' fill='#ffe3e3' stroke='#c92a2a' stroke-width='1.5'/>
+<text x='397.5' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>ALARM</text>
+<text x='397.5' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>red + buzzer blink</text>
+<rect x='635' y='80' width='175' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='722.5' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>SILENCED</text>
+<text x='722.5' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>red on, buzzer off</text>
+<line x1='164' y1='117.0' x2='306' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='235.0' y='96.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>flame for 5 samples</text>
+<text x='235.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>(250 ms)</text>
+<line x1='489' y1='117.0' x2='631' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='560.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>button pressed</text>
+<path d='M702.5,158 L702.5,188 L120.0,188 L120.0,160' fill='none' stroke='#868e96' stroke-width='1.6' stroke-dasharray='6 4' marker-end='url(#arrow)'/>
+<text x='411.25' y='203' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>no flame for 10 s</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1217 262' width='1217' height='262' role='img' aria-label='01 — Program flow'>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#495057'/></marker></defs>
+<rect width='1217' height='262' fill='#ffffff'/>
+<text x='608.5' y='30' font-family='Helvetica, Arial, sans-serif' font-size='17' text-anchor='middle' font-weight='bold' fill='#1c2733'>01 — Program flow</text>
+<rect x='40' y='80' width='159' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='119.5' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Wait</text>
+<text x='119.5' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>until 2 s passed</text>
+<rect x='349' y='80' width='200' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='449.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Read DHT</text>
+<text x='449.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>temperature, humidity</text>
+<rect x='699' y='80' width='120' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='759.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Valid?</text>
+<text x='759.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>not NaN</text>
+<rect x='969' y='80' width='208' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='1073.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Update</text>
+<text x='1073.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>min / max, LCD, Serial</text>
+<line x1='203' y1='117.0' x2='345' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='274.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>millis()</text>
+<line x1='553' y1='117.0' x2='695' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='624.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'></text>
+<line x1='823' y1='117.0' x2='965' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='894.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>yes</text>
+<path d='M739.0,158 L739.0,188 L139.5,188 L139.5,160' fill='none' stroke='#868e96' stroke-width='1.6' stroke-dasharray='6 4' marker-end='url(#arrow)'/>
+<text x='439.25' y='203' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>no: count the failure, show “Sensor error” after 3 in a row</text>
+<path d='M1053.0,158 L1053.0,228 L121.5,228 L121.5,160' fill='none' stroke='#868e96' stroke-width='1.6' stroke-dasharray='6 4' marker-end='url(#arrow)'/>
+<text x='587.25' y='243' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>next cycle</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1117 262' width='1117' height='262' role='img' aria-label='12 — Desired state and reported state'>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#495057'/></marker></defs>
+<rect width='1117' height='262' fill='#ffffff'/>
+<text x='558.5' y='30' font-family='Helvetica, Arial, sans-serif' font-size='17' text-anchor='middle' font-weight='bold' fill='#1c2733'>12 — Desired state and reported state</text>
+<rect x='40' y='80' width='142' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='111.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Web app</text>
+<text x='111.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>signed-in user</text>
+<rect x='332' y='80' width='175' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='419.5' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Firebase RTDB</text>
+<text x='419.5' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>desired / reported</text>
+<rect x='657' y='80' width='150' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='732.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>ESP32</text>
+<text x='732.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>stream listener</text>
+<rect x='957' y='80' width='120' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='1017.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Relays</text>
+<text x='1017.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>4 channels</text>
+<line x1='186' y1='117.0' x2='328' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='257.0' y='96.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>write</text>
+<text x='257.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>desired/ch2</text>
+<line x1='511' y1='117.0' x2='653' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='582.0' y='96.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>stream</text>
+<text x='582.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>event</text>
+<line x1='811' y1='117.0' x2='953' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='882.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>GPIO</text>
+<path d='M712.0,158 L712.0,188 L439.5,188 L439.5,160' fill='none' stroke='#868e96' stroke-width='1.6' stroke-dasharray='6 4' marker-end='url(#arrow)'/>
+<text x='575.75' y='203' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>write reported/ch2 + heartbeat every 10 s</text>
+<path d='M399.5,158 L399.5,228 L131.0,228 L131.0,160' fill='none' stroke='#868e96' stroke-width='1.6' stroke-dasharray='6 4' marker-end='url(#arrow)'/>
+<text x='265.25' y='243' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>live update: “pending” clears when both agree</text>
+</svg>

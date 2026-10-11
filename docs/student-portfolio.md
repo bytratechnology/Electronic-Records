@@ -1,88 +1,135 @@
-# Student portfolio note
+# Student Portfolio Summary
 
 A short page for a teacher, counsellor, or admissions officer who will not
 open every source file.
 
-### Project
+Text in [brackets] and every TODO must be replaced with my own facts before
+this page is sent to anyone.
 
-**IoT-Based Smart Home Monitoring and Automation System** — a low-voltage
-ESP32 model that measures temperature, humidity, motion, light, and gas,
-controls an LED, a DC fan, a relay, and a buzzer, and uses Firebase plus a
-browser dashboard for live data and commands.
+---
 
-### My motivation
+## Who I am
 
-I wanted one project that combined electronics, embedded programming, and a
-network service, because those are the skills I hope to study further. A
-house-scale story is easy to explain; keeping it on 5 V keeps it honest.
+**[Student Name]**, [grade / year] at [School], [City, Country].
+Intended field of study: [Electrical Engineering / Computer Engineering /
+Computer Science / …].
 
-### What I wanted to learn
+Contact: [email] · Repository: [link]
 
-- How to read sensors on an ESP32 without blocking forever
-- How automatic control and a human override can share the same outputs
-- How a cloud database can be a two-way bus, not only a logger
-- How to document a build so someone else can reproduce it
+## The portfolio in one paragraph
 
-### What I built
+Over [number] months I designed and programmed fourteen electronics
+projects, starting with a temperature display on an Arduino and ending
+with an ESP32 smart-home model that reads five sensors, controls four
+outputs, and is operated from a web dashboard through a cloud database.
+Each project is documented with its wiring, its logic, a test plan, and
+its limitations.
 
-- Modular firmware (`sensors`, `devices`, `automation`, `cloud`)
-- A Firebase schema under `smart_home/`
-- A static dashboard for sensors, mode, thresholds, and history
-- Wiring and safety notes for a school prototype
+## Why I did this
 
-Hardware assembly, bring-up, and the filled test table happen on the
-physical kit. Until those photos exist, this write-up describes the system
-I designed and programmed, not a staged product launch.
+[Write 3–5 sentences in your own words. What made you curious about
+electronics? Was there a specific moment or problem at home or at school?
+Admissions readers remember a concrete story, not “I am passionate about
+technology”.]
 
-### Technical skills
+## What I can do now
 
-| Area | In this project |
-| ---- | ---------------- |
-| Electronics | Voltage dividers, transistor fan driver, 3.3 V vs 5 V |
-| Embedded systems | GPIO, ADC, non-blocking timers, optional I2C OLED |
-| Programming | C++ modules, a small JS client |
-| IoT | ESP32 Wi-Fi, reconnect without crash loops |
-| Cloud / database | Firebase Auth + Realtime Database paths and rules |
-| Automation | Threshold rules with occupancy hold |
-| Debugging | Serial, Firebase console, browser tools (once the board is live) |
-| Independent learning | Library docs, datasheets, splitting a demo into files |
+| Skill | Evidence |
+| ----- | -------- |
+| Read a component datasheet and wire it safely | Voltage divider for a 5 V sensor on a 3.3 V board (07, 14) |
+| Turn a noisy sensor into a reliable decision | Baseline, smoothing, hysteresis (02, 05) |
+| Write embedded C++ that does several things at once | State machines and `millis()` timing (03, 04, 09) |
+| Design a control loop with safety limits | Pump bursts, soak time, daily cap (10) |
+| Connect a device to web services | HTTP, HTTPS, MQTT, NTP (06, 07, 08, 11) |
+| Use a cloud database with authentication | Firebase rules, live sync (12, 13, 14) |
+| Build a simple web interface | HTML, CSS, JavaScript (06, 09, 10, 12, 13) |
+| Design for failure | Works offline, retries, queues (07, 11, 13) |
+| Document and test my own work | README, test checklist, limitations in every folder |
 
-### Problem solving
+## Three projects I would show first
 
-The design answers a few concrete constraints: no mains power, ADC pins that
-cannot drive loads, MQ-2 analog voltage, and auto/manual that must not
-fight each other. The code and `hardware/wiring.md` are the record of those
-choices.
+**1. Smart Home Capstone (14).** The largest system: modular firmware,
+automatic and manual modes that do not fight each other, and a dashboard.
+It shows that I can integrate many parts into one design.
 
-### Challenges
+**2. Cloud Data Logging (13).** The device keeps readings in a queue when
+the Wi-Fi is down and uploads them later with their original times. It
+shows that I think about what happens when things go wrong.
 
-See `docs/challenges.md`. That file starts as a template so I do not invent
-bench problems I have not had yet.
+**3. Web App Device Control (12).** The interface shows a relay as ON only
+after the device confirms it. It shows that I care whether software tells
+the truth about hardware.
 
-### Learning journey
+[Change this list if other projects are more personal to you. Choose the
+ones you can talk about for five minutes without notes.]
 
-See `docs/learning-journey.md`.
+## The idea that changed how I work
 
-### Final result
+Early projects worked on my desk and then failed in small, annoying ways: a
+lamp that flickered at dusk, an alarm that chattered at its threshold. I
+learned that the first version that “works” is usually only correct for
+the easy case. From project 05 onward every README has a *Limitations*
+section, and from project 07 onward the main function of each device works
+without the network.
 
-**Intended result:** a working breadboard and a dashboard that stay in sync.
-**Current repository result:** complete firmware, dashboard, and documentation
-ready to flash and wire.
+[Rewrite this in your own words, or replace it with the lesson that was
+really the most important for you.]
 
-### What I learned
+## Real results
 
-A connected device is a system: pin map, firmware, security rules, and UI
-have to agree. If they disagree, the demo looks like “Wi-Fi is broken”
-when the real bug is a path name or an active-low relay.
+I only report what I measured on the real hardware.
 
-### Future goals
+| Item | Value |
+| ---- | ----- |
+| Projects built and tested on hardware | TODO: __ of 14 |
+| Longest continuous run of the data logger (13) | TODO |
+| Delay from alarm to phone notification (07) | TODO |
+| Delay from web click to relay (12) | TODO |
+| Hours spent (estimate) | TODO |
+| Shown or presented to | TODO (class, club, science fair, …) |
 
-I would like to add hysteresis, cleaner history retention, and later a
-phone client — listed as future work, not as if they already shipped.
+## Challenges I actually faced
 
-### Connection to my academic interests
+TODO: After building, write two or three real problems here: what I saw,
+what I tried, what the cause was, and how I fixed it. A real bug with a
+real fix is worth more than a list of features.
 
-This project sits at the overlap of physics (sensors), computing
-(embedded + cloud), and design (a model people can operate). That is the
-direction I want in university-level engineering or computer science,
-without pretending the breadboard is industrial building automation.
+## What I want to study next
+
+[2–3 sentences linking these projects to your intended major. For example:
+which university course, lab, or research area continues what you started
+here? Be specific to each university you apply to.]
+
+---
+
+## Ready-to-adapt text for applications
+
+These are starting points. Check every claim against what I have truly
+done, and replace the bracketed parts.
+
+**Activity description (about 150 characters)**
+
+> Designed and programmed 14 electronics/IoT projects (Arduino, ESP32, cloud);
+> documented wiring, tests, and limits on GitHub.
+
+**Short description (about 50 words)**
+
+> I taught myself embedded programming by building fourteen projects of
+> increasing difficulty, from a temperature display to a cloud-connected
+> smart-home model. I wrote the firmware in C++, built the web interfaces,
+> and published everything with test plans and known limitations at [link].
+
+**Interview or essay prompts to prepare**
+
+- Which project failed the most times before it worked, and why?
+- What would you change if you rebuilt the capstone from the start?
+- Where did you get stuck and need help, and how did you find it?
+- What is one limitation you could not solve, and what would you need to
+  learn to solve it?
+
+## A note on help and sources
+
+[State honestly what help you had: a course, a teacher or mentor, online
+tutorials, library example code, AI tools. Universities value independent
+work, and they value honesty about sources even more. Be ready to explain
+any line of code in this repository.]

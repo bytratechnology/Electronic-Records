@@ -1,0 +1,32 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1367 178' width='1367' height='178' role='img' aria-label='08 — Publish / subscribe path'>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#495057'/></marker></defs>
+<rect width='1367' height='178' fill='#ffffff'/>
+<text x='683.5' y='30' font-family='Helvetica, Arial, sans-serif' font-size='17' text-anchor='middle' font-weight='bold' fill='#1c2733'>08 — Publish / subscribe path</text>
+<text x='683.5' y='50' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' font-weight='normal' fill='#5b6b7b'>If the ESP32 loses power the broker itself publishes “offline” (MQTT last will)</text>
+<rect x='40' y='80' width='126' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='103.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Flame sensor</text>
+<text x='103.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>+ DHT22</text>
+<rect x='316' y='80' width='159' height='74' rx='12' fill='#ffe3e3' stroke='#c92a2a' stroke-width='1.5'/>
+<text x='395.5' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>ESP32</text>
+<text x='395.5' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>flame OR ≥ 55 °C</text>
+<rect x='625' y='80' width='150' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='700.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>MQTT broker</text>
+<text x='700.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>retained topics</text>
+<rect x='925' y='80' width='126' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='988.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Monitor page</text>
+<text x='988.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>subscriber</text>
+<rect x='1201' y='80' width='126' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='1264.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Browser</text>
+<text x='1264.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>notification</text>
+<line x1='170' y1='117.0' x2='312' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='241.0' y='96.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>sample</text>
+<text x='241.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>50 ms</text>
+<line x1='479' y1='117.0' x2='621' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='550.0' y='96.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>publish</text>
+<text x='550.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>FIRE / CLEAR</text>
+<line x1='779' y1='117.0' x2='921' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='850.0' y='96.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>pushed at once</text>
+<text x='850.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>(WebSocket)</text>
+<line x1='1055' y1='117.0' x2='1197' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='1126.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>on FIRE</text>
+</svg>

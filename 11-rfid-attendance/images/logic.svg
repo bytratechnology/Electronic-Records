@@ -1,0 +1,32 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1365 222' width='1365' height='222' role='img' aria-label='11 — From card tap to spreadsheet row'>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#495057'/></marker></defs>
+<rect width='1365' height='222' fill='#ffffff'/>
+<text x='682.5' y='30' font-family='Helvetica, Arial, sans-serif' font-size='17' text-anchor='middle' font-weight='bold' fill='#1c2733'>11 — From card tap to spreadsheet row</text>
+<rect x='40' y='80' width='120' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='100.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>RFID card</text>
+<text x='100.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>UID</text>
+<rect x='310' y='80' width='120' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='370.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>RC522</text>
+<text x='370.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>reader</text>
+<rect x='580' y='80' width='183' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='671.5' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>ESP32 queue</text>
+<text x='671.5' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>20 scans + NTP time</text>
+<rect x='913' y='80' width='120' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='973.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Apps Script</text>
+<text x='973.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>web app</text>
+<rect x='1183' y='80' width='142' height='74' rx='12' fill='#e7f5ff' stroke='#1971c2' stroke-width='1.5'/>
+<text x='1254.0' y='114.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Google Sheet</text>
+<text x='1254.0' y='130.0' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='normal' fill='#1c2733'>Attendance tab</text>
+<line x1='164' y1='117.0' x2='306' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='235.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>13.56 MHz</text>
+<line x1='434' y1='117.0' x2='576' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='505.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>SPI</text>
+<line x1='767' y1='117.0' x2='909' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='838.0' y='96.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>HTTPS POST</text>
+<text x='838.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>JSON + secret</text>
+<line x1='1037' y1='117.0' x2='1179' y2='117.0' stroke='#495057' stroke-width='1.8' marker-end='url(#arrow)'/>
+<text x='1108.0' y='96.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>append</text>
+<text x='1108.0' y='109.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>row</text>
+<path d='M953.0,158 L953.0,188 L691.5,188 L691.5,160' fill='none' stroke='#868e96' stroke-width='1.6' stroke-dasharray='6 4' marker-end='url(#arrow)'/>
+<text x='822.25' y='203' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#495057'>ok / unknown / denied → LED and buzzer feedback</text>
+</svg>

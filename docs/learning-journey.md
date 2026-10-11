@@ -1,108 +1,134 @@
-# Learning journey
+# Learning Journey
 
-This page is the path through the project, not a list of marketing features.
-Each step names something I had to understand before the next step worked.
+The path through the fourteen projects. Each step names the one thing I
+had to understand before the next project could work.
 
-## 1. Idea
+The dates are placeholders. Replace each TODO with the month I really
+built that project.
 
-I wanted a single breadboard that could *sense* a room, *act* on that data,
-and *show* the same data on a laptop. A smart-home model is familiar to
-admissions readers and still small enough to finish.
+## Level 1 — Basic electronics
 
-**What I learned:** a useful IoT project is a loop (sense → decide → act →
-report), not a pile of sensors.
+### 01 · Temperature and humidity monitor — TODO: date
 
-## 2. Research
+The first complete system: sensor in, display out.
 
-I compared ESP8266 and ESP32, DHT11 and DHT22, and whether a local web
-server on the chip would be enough. ESP32 has more ADC channels. Firebase
-Realtime Database fits a two-way dashboard better than a page hosted only
-on the microcontroller.
+**What I learned:** a sensor has rules (the DHT cannot be read faster than
+every two seconds), and a program should say “sensor error” instead of
+showing an old number.
 
-**What I learned:** how to read datasheets enough to see voltage, pin type,
-and “this output is analog, that one is digital.”
+### 02 · Gas leak alarm — TODO: date
 
-## 3. Hardware selection
+The first sensor whose number means nothing on its own.
 
-I chose low-voltage stand-ins for lamps and fans so the model never needs
-mains electricity. MQ-2 is a typical school gas sensor; I also had to plan
-a divider because the analog output is not automatically 3.3 V-safe.
+**What I learned:** measure a baseline first, then decide relative to it.
+Two thresholds (hysteresis) stop an alarm from chattering.
 
-**What I learned:** school “sensor modules” still have power and logic
-levels that can damage a board if you wire them like 5 V Arduino examples.
+### 03 · Fire alarm — TODO: date
 
-## 4. Circuit design
+The first project with memory: the alarm stays on after the cause is gone.
 
-I wrote a GPIO map first, then the wiring table, then the firmware `#define`
-list so the three documents could not drift.
+**What I learned:** drawing the states on paper before writing code. A
+button needs debouncing.
 
-**What I learned:** input-only RTC pins (34–39) are fine for ADC and a
-mistake for a fan transistor.
+### 04 · Motion-activated light — TODO: date
 
-## 5. ESP32 programming
+The first project built entirely around time.
 
-I split sensors, devices, automation, and cloud into separate files so
-`loop()` only sequences work. DHT temperature and humidity share one read
-with a 2 s cache.
+**What I learned:** `millis()` instead of `delay()`, so the program can
+watch the sensor while it waits. PWM for a smooth fade.
 
-**What I learned:** blocking `while (WiFi.status() != CONNECTED)` forever
-is a poor pattern; a timeout lets the house logic still run.
+### 05 · Ambient-light automatic lamp — TODO: date
 
-## 6. Sensor testing
+The project that taught me that “works on my desk” is not “works”.
 
-Each sensor has a different “it is working” check: DHT must not return NaN,
-PIR is a digital edge, LDR is a relative ADC, MQ-2 needs warm-up.
+**What I learned:** why a lamp flickers at dusk and three different ways
+to stop it. An actuator can disturb its own sensor.
 
-**What I learned:** you cannot tune `gas_threshold` in the first minute
-after power-up.
+## Level 2 — IoT
 
-## 7. Firebase integration
+### 06 · Online weather station — TODO: date
 
-The firmware signs in with email/password, updates a JSON node, and reads
-settings on a poll. History uses `push` so old samples are not overwritten.
+Moving from Arduino Uno to ESP32, and from an LCD to a browser.
 
-**What I learned:** API keys in a web app are not a substitute for database
-rules; both the ESP32 and the browser still need a user.
+**What I learned:** the ESP32 runs at 3.3 V, not 5 V. A web page and the
+data behind it are separate things. Wi-Fi code needs a timeout.
 
-## 8. Dashboard development
+### 07 · Internet gas alert — TODO: date
 
-The UI is static HTML/CSS/JS and the Firebase compat SDK. Manual toggles
-are disabled in auto mode so the page cannot fight the firmware.
+The first message sent to a phone.
 
-**What I learned:** a dashboard is part of the control system, not only a
-display. Who is allowed to write `devices/light` matters.
+**What I learned:** how to call a web API over HTTPS. The buzzer must never
+wait for the Internet. A 5 V analog output needs a divider before an ESP32
+pin.
 
-## 9. Debugging
+### 08 · Real-time fire alert — TODO: date
 
-Typical tools on this project: USB serial at 115200, the Firebase console
-tree, and the browser debug console.
+Changing from “the browser asks” to “the device tells”.
 
-**What I learned:** say whether a bug is wiring, firmware, rules, or the
-dashboard before changing all four at once.
+**What I learned:** MQTT publish / subscribe, retained messages, and the
+last will that reports a device as offline when it loses power.
 
-## 10. System testing
+### 09 · Web-controlled smart light — TODO: date
 
-End-to-end means: change a threshold on the page → see the ESP32 react →
-see the device card update. The checklist lives in `docs/testing.md` and
-starts as TODO until I run it on the desk.
+The first time a browser changed something physical.
 
-**What I learned:** automatic and manual mode are different test cases, not
-one “it works” sentence.
+**What I learned:** when a button and a web page control the same lamp,
+the state must live in one place. Never trust a value just because it came
+from my own page.
 
-## 11. Improvements after the first wiring
+### 10 · IoT plant watering — TODO: date
 
-Planned modest improvements (only after the base path works): OLED if the
-module is available, CSV export from history, presence based on a stale
-`last_update`.
+The first feedback loop, and the first motor.
 
-**What I learned:** extra features are easy to add and easy to make the
-demo flaky; finish the loop first.
+**What I learned:** soil reacts slowly, so pump briefly and wait. Plan for
+the sensor failing. Give a motor its own power supply.
 
-## 12. Final system
+### 11 · RFID attendance — TODO: date
 
-The intended finished state is: breadboard powered from USB, dashboard on
-localhost, auto fan/light/gas rules, manual override, and photos in
-`images/` of that real setup.
+The first project that handles information about people.
 
-Until those photos and the test table are filled, the repository is the
-design and source code of the project, not a claim that every test passed.
+**What I learned:** SPI wiring, real time from NTP, and putting a queue
+between a fast reader and a slow network. Personal data needs care before
+anything is published.
+
+### 12 · Web app device control — TODO: date
+
+Remote control with a login.
+
+**What I learned:** the difference between what the user wants and what
+the device has done. A login page protects nothing without database rules.
+
+### 13 · Cloud data logging — TODO: date
+
+Keeping data instead of only showing it.
+
+**What I learned:** the time of a measurement belongs to the measurement,
+not to the upload. Delete from the queue only after the server confirms.
+
+### 14 · Smart home capstone — TODO: date
+
+Everything together: five sensors, four outputs, automatic rules, manual
+override, cloud dashboard.
+
+**What I learned:** a large program has to be split into modules with
+clear jobs. The pin map, the firmware, the database paths, and the
+dashboard are one design and must agree.
+
+## Patterns I now use by default
+
+| Pattern | First used | Used again in |
+| ------- | ---------- | ------------- |
+| Non-blocking timing with `millis()` | 01 | every project |
+| Hysteresis | 02 | 05, 07 |
+| State machine | 02 | 03, 04, 07, 10 |
+| Network with timeout and retry | 06 | 07–14 |
+| Local function first, network second | 07 | 08, 09, 10, 14 |
+| Queue between input and upload | 11 | 13 |
+| Secrets in a gitignored file | 06 | 07–14 |
+| Written test checklist | 01 | every project |
+
+## What I would do differently
+
+TODO: Fill in after building. Two or three honest points, for example a
+project I would redesign, a mistake I repeated, or a tool I wish I had
+learned earlier.

@@ -1,0 +1,133 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 16px;
+  background: #f4f6f8;
+  color: #1c2733;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+h2 {
+  font-size: 1.05rem;
+  margin-top: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.panel,
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.panel label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.panel input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.card .name {
+  font-weight: 600;
+}
+
+.card .state {
+  font-size: 0.85rem;
+  color: #5b6b7b;
+  margin: 6px 0 12px;
+}
+
+.card.pending .state {
+  color: #e67700;
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #1971c2;
+  background: #1971c2;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.secondary,
+.card button {
+  background: #fff;
+  color: #1c2733;
+  border-color: #adb5bd;
+}
+
+.card button {
+  width: 100%;
+}
+
+.card button[aria-pressed="true"] {
+  background: #ffd43b;
+  border-color: #fab005;
+}
+
+.pill {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.pill.ok {
+  background: #d3f9d8;
+  color: #2b8a3e;
+}
+
+.pill.bad {
+  background: #ffe3e3;
+  color: #c92a2a;
+}
+
+.banner {
+  background: #ffe3e3;
+  color: #c92a2a;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.banner.hidden {
+  display: none;
+}
+
+.muted {
+  color: #5b6b7b;
+  font-size: 0.85rem;
+}

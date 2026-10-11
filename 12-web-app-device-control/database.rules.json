@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "device_control": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  }
+}

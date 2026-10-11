@@ -2,15 +2,14 @@
 config.h
 **/config.h
 !**/config.example.h
-dashboard/firebase-config.js
+**/firebase-config.js
+**/monitor/config.js
 .env
 .env.*
 !.env.example
 secrets.h
 **/secrets.*
 *.pem
-google-services.json
-GoogleService-Info.plist
 serviceAccount*.json
 
 # PlatformIO / Arduino build
@@ -27,18 +26,12 @@ serviceAccount*.json
 .idea/
 *.code-workspace
 *.swp
-*.swo
 *~
 
 # OS
 .DS_Store
 Thumbs.db
 desktop.ini
-
-# Python
-__pycache__/
-*.pyc
-.venv/
 
 # Logs and local notes
 *.log

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Device Control</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>Device Control</h1>
+    <span id="device-pill" class="pill bad">Device unknown</span>
+  </header>
+
+  <div id="message" class="banner hidden"></div>
+
+  <form id="login" class="panel">
+    <h2>Sign in</h2>
+    <label>Email <input id="email" type="email" autocomplete="username" required></label>
+    <label>Password <input id="password" type="password" autocomplete="current-password" required></label>
+    <button type="submit">Sign in</button>
+  </form>
+
+  <section id="app" class="hidden">
+    <div id="channels" class="grid"></div>
+    <p class="muted">
+      A card shows <em>pending</em> after you press it until the ESP32 confirms
+      that the relay really switched.
+    </p>
+    <button id="logout" class="secondary">Sign out</button>
+  </section>
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

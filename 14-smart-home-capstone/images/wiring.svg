@@ -1,0 +1,174 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 920 796' width='920' height='796' role='img' aria-label='14 — Smart home capstone'>
+<defs><marker id='arrow' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='7' markerHeight='7' orient='auto-start-reverse'><path d='M0,0 L10,5 L0,10 z' fill='#495057'/></marker></defs>
+<rect width='920' height='796' fill='#ffffff'/>
+<text x='460.0' y='30' font-family='Helvetica, Arial, sans-serif' font-size='17' text-anchor='middle' font-weight='bold' fill='#1c2733'>14 — Smart home capstone</text>
+<text x='460.0' y='50' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='middle' font-weight='normal' fill='#5b6b7b'>Connection diagram — each line is one jumper wire</text>
+<rect x='370' y='70' width='180' height='656' rx='10' fill='#1c2733'/>
+<text x='460.0' y='96' font-family='Helvetica, Arial, sans-serif' font-size='15' text-anchor='middle' font-weight='bold' fill='#ffffff'>ESP32 DevKit</text>
+<line x1='384' y1='108' x2='536' y2='108' stroke='#495057'/>
+<rect x='40' y='120' width='190' height='114' rx='8' fill='#f1f3f5' stroke='#868e96'/>
+<rect x='40' y='120' width='190' height='30' rx='8' fill='#dee2e6'/>
+<text x='135.0' y='140' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>DHT22</text>
+<text x='222' y='168.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='normal' fill='#1c2733'>VCC</text>
+<text x='378' y='168.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='bold' fill='#ffffff'>3.3 V</text>
+<line x1='230' y1='164.0' x2='370' y2='164.0' stroke='#e03131' stroke-width='3' stroke-linecap='round'/>
+<circle cx='230' cy='164.0' r='4' fill='#e03131'/>
+<circle cx='370' cy='164.0' r='4' fill='#e03131'/>
+<text x='222' y='196.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='normal' fill='#1c2733'>DATA</text>
+<text x='378' y='196.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='bold' fill='#ffffff'>GPIO 4</text>
+<line x1='230' y1='192.0' x2='370' y2='192.0' stroke='#e8590c' stroke-width='3' stroke-linecap='round'/>
+<circle cx='230' cy='192.0' r='4' fill='#e8590c'/>
+<circle cx='370' cy='192.0' r='4' fill='#e8590c'/>
+<text x='222' y='224.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='normal' fill='#1c2733'>GND</text>
+<text x='378' y='224.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='bold' fill='#ffffff'>GND</text>
+<line x1='230' y1='220.0' x2='370' y2='220.0' stroke='#343a40' stroke-width='3' stroke-linecap='round'/>
+<circle cx='230' cy='220.0' r='4' fill='#343a40'/>
+<circle cx='370' cy='220.0' r='4' fill='#343a40'/>
+<rect x='40' y='254' width='190' height='114' rx='8' fill='#f1f3f5' stroke='#868e96'/>
+<rect x='40' y='254' width='190' height='30' rx='8' fill='#dee2e6'/>
+<text x='135.0' y='274' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>HC-SR501 PIR</text>
+<text x='222' y='302.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='normal' fill='#1c2733'>VCC</text>
+<text x='378' y='302.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='bold' fill='#ffffff'>5 V (VIN)</text>
+<line x1='230' y1='298.0' x2='370' y2='298.0' stroke='#e03131' stroke-width='3' stroke-linecap='round'/>
+<circle cx='230' cy='298.0' r='4' fill='#e03131'/>
+<circle cx='370' cy='298.0' r='4' fill='#e03131'/>
+<text x='222' y='330.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='normal' fill='#1c2733'>OUT</text>
+<text x='378' y='330.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='bold' fill='#ffffff'>GPIO 27</text>
+<line x1='230' y1='326.0' x2='370' y2='326.0' stroke='#0c8599' stroke-width='3' stroke-linecap='round'/>
+<circle cx='230' cy='326.0' r='4' fill='#0c8599'/>
+<circle cx='370' cy='326.0' r='4' fill='#0c8599'/>
+<text x='222' y='358.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='normal' fill='#1c2733'>GND</text>
+<text x='378' y='358.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='bold' fill='#ffffff'>GND</text>
+<line x1='230' y1='354.0' x2='370' y2='354.0' stroke='#343a40' stroke-width='3' stroke-linecap='round'/>
+<circle cx='230' cy='354.0' r='4' fill='#343a40'/>
+<circle cx='370' cy='354.0' r='4' fill='#343a40'/>
+<rect x='40' y='388' width='190' height='114' rx='8' fill='#f1f3f5' stroke='#868e96'/>
+<rect x='40' y='388' width='190' height='30' rx='8' fill='#dee2e6'/>
+<text x='135.0' y='408' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>LDR voltage divider</text>
+<text x='222' y='436.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='normal' fill='#1c2733'>LDR top</text>
+<text x='378' y='436.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='bold' fill='#ffffff'>3.3 V</text>
+<line x1='230' y1='432.0' x2='370' y2='432.0' stroke='#e03131' stroke-width='3' stroke-linecap='round'/>
+<circle cx='230' cy='432.0' r='4' fill='#e03131'/>
+<circle cx='370' cy='432.0' r='4' fill='#e03131'/>
+<text x='222' y='464.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='normal' fill='#1c2733'>midpoint</text>
+<text x='378' y='464.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='bold' fill='#ffffff'>GPIO 34</text>
+<line x1='230' y1='460.0' x2='370' y2='460.0' stroke='#1971c2' stroke-width='3' stroke-linecap='round'/>
+<circle cx='230' cy='460.0' r='4' fill='#1971c2'/>
+<circle cx='370' cy='460.0' r='4' fill='#1971c2'/>
+<text x='222' y='492.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='normal' fill='#1c2733'>10 kΩ bottom</text>
+<text x='378' y='492.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='bold' fill='#ffffff'>GND</text>
+<line x1='230' y1='488.0' x2='370' y2='488.0' stroke='#343a40' stroke-width='3' stroke-linecap='round'/>
+<circle cx='230' cy='488.0' r='4' fill='#343a40'/>
+<circle cx='370' cy='488.0' r='4' fill='#343a40'/>
+<rect x='40' y='522' width='190' height='114' rx='8' fill='#f1f3f5' stroke='#868e96'/>
+<rect x='40' y='522' width='190' height='30' rx='8' fill='#dee2e6'/>
+<text x='135.0' y='542' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>MQ-2 gas sensor</text>
+<text x='222' y='570.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='normal' fill='#1c2733'>VCC</text>
+<text x='378' y='570.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='bold' fill='#ffffff'>5 V (VIN)</text>
+<line x1='230' y1='566.0' x2='370' y2='566.0' stroke='#e03131' stroke-width='3' stroke-linecap='round'/>
+<circle cx='230' cy='566.0' r='4' fill='#e03131'/>
+<circle cx='370' cy='566.0' r='4' fill='#e03131'/>
+<text x='222' y='598.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='normal' fill='#1c2733'>GND</text>
+<text x='378' y='598.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='bold' fill='#ffffff'>GND</text>
+<line x1='230' y1='594.0' x2='370' y2='594.0' stroke='#343a40' stroke-width='3' stroke-linecap='round'/>
+<circle cx='230' cy='594.0' r='4' fill='#343a40'/>
+<circle cx='370' cy='594.0' r='4' fill='#343a40'/>
+<text x='222' y='626.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='normal' fill='#1c2733'>A0</text>
+<text x='378' y='626.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='bold' fill='#ffffff'>GPIO 35</text>
+<line x1='230' y1='622.0' x2='370' y2='622.0' stroke='#0c8599' stroke-width='3' stroke-linecap='round'/>
+<circle cx='230' cy='622.0' r='4' fill='#0c8599'/>
+<circle cx='370' cy='622.0' r='4' fill='#0c8599'/>
+<rect x='225.0' y='612.0' width='150' height='20' rx='4' fill='#fff9db' stroke='#0c8599'/>
+<text x='300.0' y='626.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#1c2733'>10k / 10k divider</text>
+<rect x='690' y='120' width='190' height='86' rx='8' fill='#f1f3f5' stroke='#868e96'/>
+<rect x='690' y='120' width='190' height='30' rx='8' fill='#dee2e6'/>
+<text x='785.0' y='140' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>LED light</text>
+<text x='698' y='168.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>anode (+)</text>
+<text x='542' y='168.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>GPIO 25</text>
+<line x1='690' y1='164.0' x2='550' y2='164.0' stroke='#c2255c' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='164.0' r='4' fill='#c2255c'/>
+<circle cx='550' cy='164.0' r='4' fill='#c2255c'/>
+<rect x='593.0' y='154.0' width='54' height='20' rx='4' fill='#fff9db' stroke='#c2255c'/>
+<text x='620.0' y='168.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#1c2733'>220 Ω</text>
+<text x='698' y='196.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>cathode (−)</text>
+<text x='542' y='196.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>GND</text>
+<line x1='690' y1='192.0' x2='550' y2='192.0' stroke='#343a40' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='192.0' r='4' fill='#343a40'/>
+<circle cx='550' cy='192.0' r='4' fill='#343a40'/>
+<rect x='690' y='226' width='190' height='86' rx='8' fill='#f1f3f5' stroke='#868e96'/>
+<rect x='690' y='226' width='190' height='30' rx='8' fill='#dee2e6'/>
+<text x='785.0' y='246' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Fan driver (2N2222)</text>
+<text x='698' y='274.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>base</text>
+<text x='542' y='274.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>GPIO 26</text>
+<line x1='690' y1='270.0' x2='550' y2='270.0' stroke='#1971c2' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='270.0' r='4' fill='#1971c2'/>
+<circle cx='550' cy='270.0' r='4' fill='#1971c2'/>
+<rect x='597.0' y='260.0' width='46' height='20' rx='4' fill='#fff9db' stroke='#1971c2'/>
+<text x='620.0' y='274.0' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='middle' font-weight='normal' fill='#1c2733'>1 kΩ</text>
+<text x='698' y='302.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>emitter</text>
+<text x='542' y='302.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>GND</text>
+<line x1='690' y1='298.0' x2='550' y2='298.0' stroke='#343a40' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='298.0' r='4' fill='#343a40'/>
+<circle cx='550' cy='298.0' r='4' fill='#343a40'/>
+<rect x='690' y='332' width='190' height='114' rx='8' fill='#f1f3f5' stroke='#868e96'/>
+<rect x='690' y='332' width='190' height='30' rx='8' fill='#dee2e6'/>
+<text x='785.0' y='352' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Relay module</text>
+<text x='698' y='380.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>IN</text>
+<text x='542' y='380.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>GPIO 32</text>
+<line x1='690' y1='376.0' x2='550' y2='376.0' stroke='#2f9e44' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='376.0' r='4' fill='#2f9e44'/>
+<circle cx='550' cy='376.0' r='4' fill='#2f9e44'/>
+<text x='698' y='408.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>VCC</text>
+<text x='542' y='408.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>5 V (VIN)</text>
+<line x1='690' y1='404.0' x2='550' y2='404.0' stroke='#e03131' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='404.0' r='4' fill='#e03131'/>
+<circle cx='550' cy='404.0' r='4' fill='#e03131'/>
+<text x='698' y='436.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>GND</text>
+<text x='542' y='436.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>GND</text>
+<line x1='690' y1='432.0' x2='550' y2='432.0' stroke='#343a40' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='432.0' r='4' fill='#343a40'/>
+<circle cx='550' cy='432.0' r='4' fill='#343a40'/>
+<rect x='690' y='466' width='190' height='86' rx='8' fill='#f1f3f5' stroke='#868e96'/>
+<rect x='690' y='466' width='190' height='30' rx='8' fill='#dee2e6'/>
+<text x='785.0' y='486' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>Active buzzer</text>
+<text x='698' y='514.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>+</text>
+<text x='542' y='514.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>GPIO 33</text>
+<line x1='690' y1='510.0' x2='550' y2='510.0' stroke='#c2255c' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='510.0' r='4' fill='#c2255c'/>
+<circle cx='550' cy='510.0' r='4' fill='#c2255c'/>
+<text x='698' y='542.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>−</text>
+<text x='542' y='542.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>GND</text>
+<line x1='690' y1='538.0' x2='550' y2='538.0' stroke='#343a40' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='538.0' r='4' fill='#343a40'/>
+<circle cx='550' cy='538.0' r='4' fill='#343a40'/>
+<rect x='690' y='572' width='190' height='142' rx='8' fill='#f1f3f5' stroke='#868e96'/>
+<rect x='690' y='572' width='190' height='30' rx='8' fill='#dee2e6'/>
+<text x='785.0' y='592' font-family='Helvetica, Arial, sans-serif' font-size='13' text-anchor='middle' font-weight='bold' fill='#1c2733'>OLED SSD1306 (optional)</text>
+<text x='698' y='620.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>VCC</text>
+<text x='542' y='620.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>3.3 V</text>
+<line x1='690' y1='616.0' x2='550' y2='616.0' stroke='#e03131' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='616.0' r='4' fill='#e03131'/>
+<circle cx='550' cy='616.0' r='4' fill='#e03131'/>
+<text x='698' y='648.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>GND</text>
+<text x='542' y='648.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>GND</text>
+<line x1='690' y1='644.0' x2='550' y2='644.0' stroke='#343a40' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='644.0' r='4' fill='#343a40'/>
+<circle cx='550' cy='644.0' r='4' fill='#343a40'/>
+<text x='698' y='676.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>SDA</text>
+<text x='542' y='676.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>GPIO 21</text>
+<line x1='690' y1='672.0' x2='550' y2='672.0' stroke='#2f9e44' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='672.0' r='4' fill='#2f9e44'/>
+<circle cx='550' cy='672.0' r='4' fill='#2f9e44'/>
+<text x='698' y='704.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#1c2733'>SCL</text>
+<text x='542' y='704.0' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='end' font-weight='bold' fill='#ffffff'>GPIO 22</text>
+<line x1='690' y1='700.0' x2='550' y2='700.0' stroke='#9c36b5' stroke-width='3' stroke-linecap='round'/>
+<circle cx='690' cy='700.0' r='4' fill='#9c36b5'/>
+<circle cx='550' cy='700.0' r='4' fill='#9c36b5'/>
+<line x1='40' y1='752' x2='66' y2='752' stroke='#e03131' stroke-width='3'/>
+<text x='72' y='756' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='start' font-weight='normal' fill='#5b6b7b'>power</text>
+<line x1='125' y1='752' x2='151' y2='752' stroke='#343a40' stroke-width='3'/>
+<text x='157' y='756' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='start' font-weight='normal' fill='#5b6b7b'>ground</text>
+<line x1='217' y1='752' x2='243' y2='752' stroke='#1971c2' stroke-width='3'/>
+<text x='249' y='756' font-family='Helvetica, Arial, sans-serif' font-size='11' text-anchor='start' font-weight='normal' fill='#5b6b7b'>signal (colours vary)</text>
+<text x='40' y='776' font-family='Helvetica, Arial, sans-serif' font-size='12' text-anchor='start' font-weight='normal' fill='#5b6b7b'>• Fan: 5 V → fan (+), fan (−) → 2N2222 collector, 1N4007 across the fan. Details in hardware/wiring.md.</text>
+</svg>

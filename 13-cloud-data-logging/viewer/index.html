@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloud Data Log</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 16px; background: #f4f6f8; color: #1c2733; }
+    main { max-width: 820px; margin: 0 auto; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.05rem; margin-top: 0; }
+    .hidden { display: none; }
+    .panel { background: #fff; border-radius: 10px; padding: 18px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+    .panel label { display: block; margin-bottom: 10px; font-size: .9rem; }
+    #login input { display: block; width: 100%; box-sizing: border-box; padding: 8px; margin-top: 4px; }
+    .toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    button, select { padding: 8px 12px; border-radius: 8px; border: 1px solid #adb5bd; background: #fff; cursor: pointer; }
+    .banner { background: #ffe3e3; color: #c92a2a; padding: 10px 14px; border-radius: 8px; margin-bottom: 12px; }
+    .muted { color: #5b6b7b; font-size: .85rem; }
+    table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #e9ecef; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Cloud Data Log</h1>
+  <div id="message" class="banner hidden"></div>
+
+  <form id="login" class="panel">
+    <h2>Sign in</h2>
+    <label>Email <input id="email" type="email" autocomplete="username" required></label>
+    <label>Password <input id="password" type="password" autocomplete="current-password" required></label>
+    <button type="submit">Sign in</button>
+  </form>
+
+  <section id="app" class="hidden">
+    <div class="panel toolbar">
+      <label for="range">Show last</label>
+      <select id="range">
+        <option value="60">60 readings</option>
+        <option value="240">240 readings</option>
+        <option value="1440">1440 readings</option>
+      </select>
+      <button id="csv">Download CSV</button>
+      <button id="logout">Sign out</button>
+      <span id="summary" class="muted"></span>
+    </div>
+
+    <div class="panel"><canvas id="chart" height="120"></canvas></div>
+
+    <div class="panel">
+      <h2>Latest readings</h2>
+      <table>
+        <thead><tr><th>Time</th><th>Temperature (°C)</th><th>Humidity (%)</th><th>Light (ADC)</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="viewer.js"></script>
+</body>
+</html>

@@ -1,77 +1,61 @@
-# Security
+# Security and Safety
 
-This is a student STEM prototype, not a production home-security product.
-It still follows a few rules so Wi-Fi passwords and Firebase keys never
-end up on GitHub.
+These are student prototypes, not products. They still follow a few rules
+so that passwords never end up on GitHub and nobody gets hurt on the bench.
 
-## What must never be committed
+## Secrets that must never be committed
 
-Do not put any of the following in git, README files, screenshots of code,
-or commit messages:
+- Wi-Fi name and password
+- Telegram bot token and chat ID (project 07)
+- MQTT broker username and password (project 08)
+- Google Apps Script URL and shared secret (project 11)
+- Firebase user email and password (projects 12, 13, 14)
+- Real names, student IDs, phone numbers, or home address
 
-- Wi-Fi SSID/password (if the network is private)
-- Firebase API keys used with a real project that has open rules
-- Firebase database secrets
-- Service account JSON files
-- Email/password of the Firebase user
-- Personal phone numbers, home address, or school ID numbers
+## Where the real values live
 
-The files that hold real values are:
+| File (gitignored) | Created from | Projects |
+| ----------------- | ------------ | -------- |
+| `firmware/include/config.h` | `firmware/config.example.h` | 06–13 |
+| `monitor/config.js` | `monitor/config.example.js` | 08 |
+| `web-app/firebase-config.js`, `viewer/firebase-config.js` | `firebase-config.example.js` | 12, 13 |
+| Capstone credentials | see [14-smart-home-capstone/SECURITY.md](14-smart-home-capstone/SECURITY.md) | 14 |
 
-| File | Purpose |
-| ---- | ------- |
-| `firmware/esp32/include/config.h` | ESP32 Wi-Fi and Firebase credentials |
-| `dashboard/firebase-config.js` | Dashboard Firebase config and login |
+After filling them in, run `git status` and confirm none of these files
+appear as new files.
 
-Both are listed in `.gitignore`. Only the example files are tracked:
+In projects 12 and 13 the web page asks for the email and password in a
+sign-in form, so no password is stored in any JavaScript file.
 
-- `firmware/esp32/config.example.h`
-- `dashboard/firebase-config.example.js`
+## Cloud rules
 
-## How to set up credentials locally
+- Firebase Realtime Database rules must require a signed-in user
+  (`auth != null`). Never leave a database public after a demo.
+- Use a separate Firebase user for the ESP32, so it can be disabled
+  without locking yourself out.
+- A public MQTT test broker is readable by anyone. Do not send personal
+  data through it.
 
-1. Copy `firmware/esp32/config.example.h` to `firmware/esp32/include/config.h`.
-2. Copy `dashboard/firebase-config.example.js` to `dashboard/firebase-config.js`.
-3. Fill in values from your own Wi-Fi and Firebase project.
-4. Run `git status` and confirm those two files do **not** appear as new files.
+## Personal data
 
-## Firebase rules
+Project 11 handles attendance records. Screenshots and example data in
+this repository use invented names only.
 
-Do not leave Realtime Database rules as public read/write after a classroom demo.
+## Electrical safety
 
-Recommended classroom rule (requires signed-in user):
+- All projects run on USB 5 V or 3.3 V. **No project switches mains
+  electricity (220 V / 110 V).** Relays switch low-voltage DC loads only.
+- ESP32 pins accept 3.3 V at most. 5 V sensor outputs go through a voltage
+  divider (see projects 07 and 14).
+- Motors and pumps use their own supply with a common ground (project 10).
+- Flame and gas tests are done briefly, in a ventilated room, on a
+  non-flammable surface, with an adult or teacher present.
+- These devices are learning models. They are not certified fire, gas, or
+  security equipment and must not be relied on for safety.
 
-```json
-{
-  "rules": {
-    "smart_home": {
-      ".read": "auth != null",
-      ".write": "auth != null"
-    }
-  }
-}
-```
+## If a secret leaks
 
-Open rules (`.read: true`, `.write: true`) make the database reachable by
-anyone who knows the URL. Use them only for a few minutes of local testing,
-then switch back to authenticated rules.
-
-This project uses **email/password authentication**, not a database secret.
-The ESP32 and the dashboard sign in as the same Firebase user.
-
-## Hardware safety
-
-This model uses low-voltage DC loads only (LED, small DC fan, 5 V relay
-switching a DC load). Do not connect mains 220 V / 110 V to the relay
-module in this prototype.
-
-The MQ-2 analog output can exceed 3.3 V. Use the voltage divider described
-in `hardware/wiring.md` before connecting it to an ESP32 ADC pin.
-
-## If credentials leak
-
-1. Change the Wi-Fi password if it was committed.
-2. In Firebase: disable the leaked user, rotate the web API key if needed,
-   and tighten database rules.
-3. Remove the secret from git history before making the repository public.
-4. Assume the leaked value is compromised; do not keep using it.
+1. Assume it is compromised and replace it (new Wi-Fi password, revoke the
+   bot token with @BotFather, new Apps Script secret and deployment, disable
+   the Firebase user).
+2. Remove it from the git history before making the repository public.

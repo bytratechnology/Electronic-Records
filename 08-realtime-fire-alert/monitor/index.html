@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fire Alert Monitor</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 16px; background: #f4f6f8; color: #1c2733; }
+    main { max-width: 560px; margin: 0 auto; }
+    h1 { font-size: 1.3rem; }
+    .panel { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+    #alarm { font-size: 2rem; font-weight: 700; text-align: center; }
+    #alarm.fire { background: #b3261e; color: #fff; }
+    #alarm.clear { color: #2b8a3e; }
+    .row { display: flex; justify-content: space-between; padding: 4px 0; }
+    .muted { color: #5b6b7b; font-size: .85rem; }
+    button { padding: 8px 14px; border-radius: 8px; border: 1px solid #adb5bd; background: #fff; cursor: pointer; }
+    ul { padding-left: 18px; margin: 8px 0 0; font-size: .9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Fire Alert Monitor</h1>
+
+  <div id="alarm" class="panel">Waiting for data…</div>
+
+  <div class="panel">
+    <div class="row"><span>Broker</span><strong id="broker">connecting…</strong></div>
+    <div class="row"><span>Device</span><strong id="device">unknown</strong></div>
+    <div class="row"><span>Temperature</span><strong id="temperature">—</strong></div>
+    <div class="row"><span>Flame sensor (ADC)</span><strong id="flame">—</strong></div>
+    <div class="row"><span>Last telemetry</span><strong id="updated">—</strong></div>
+  </div>
+
+  <div class="panel">
+    <button id="notify">Enable browser notifications</button>
+    <p class="muted">Event log (this browser session only)</p>
+    <ul id="log"></ul>
+  </div>
+</main>
+
+<script src="https://unpkg.com/mqtt@5.10.1/dist/mqtt.min.js"></script>
+<script src="config.js"></script>
+<script>
+  (function () {
+    "use strict";
+
+    var els = {
+      alarm: document.getElementById("alarm"),
+      broker: document.getElementById("broker"),
+      device: document.getElementById("device"),
+      temperature: document.getElementById("temperature"),
+      flame: document.getElementById("flame"),
+      updated: document.getElementById("updated"),
+      log: document.getElementById("log"),
+      notify: document.getElementById("notify"),
+    };
+
+    function addLog(text) {
+      var item = document.createElement("li");
+      item.textContent = new Date().toLocaleTimeString() + " — " + text;
+      els.log.insertBefore(item, els.log.firstChild);
+    }
+
+    function notify(text) {
+      if ("Notification" in window && Notification.permission === "granted") {
+        new Notification("Fire Alert Monitor", { body: text });
+      }
+    }
+
+    els.notify.addEventListener("click", function () {
+      if ("Notification" in window) {
+        Notification.requestPermission();
+      }
+    });
+
+    if (!window.MONITOR_CONFIG || window.MONITOR_CONFIG.brokerUrl.indexOf("YOUR_") !== -1) {
+      els.alarm.textContent = "Copy config.example.js to config.js and fill it in.";
+      return;
+    }
+
+    var config = window.MONITOR_CONFIG;
+    var lastAlarm = null;
+
+    var client = mqtt.connect(config.brokerUrl, {
+      username: config.username || undefined,
+      password: config.password || undefined,
+      reconnectPeriod: 3000,
+    });
+
+    client.on("connect", function () {
+      els.broker.textContent = "connected";
+      client.subscribe(config.topicBase + "/#");
+    });
+    client.on("reconnect", function () { els.broker.textContent = "reconnecting…"; });
+    client.on("close", function () { els.broker.textContent = "disconnected"; });
+    client.on("error", function (error) { addLog("Broker error: " + error.message); });
+
+    client.on("message", function (topic, payload) {
+      var leaf = topic.slice(config.topicBase.length + 1);
+      var text = payload.toString();
+
+      if (leaf === "status") {
+        els.device.textContent = text;
+        addLog("Device " + text);
+      } else if (leaf === "alarm") {
+        var fire = text === "FIRE";
+        els.alarm.textContent = fire ? "FIRE DETECTED" : "All clear";
+        els.alarm.className = "panel " + (fire ? "fire" : "clear");
+        if (text !== lastAlarm) {
+          addLog(fire ? "ALARM: fire detected" : "Alarm cleared");
+          if (fire) { notify("Fire detected by the ESP32 sensor."); }
+          lastAlarm = text;
+        }
+      } else if (leaf === "telemetry") {
+        try {
+          var data = JSON.parse(text);
+          els.temperature.textContent = data.temperature === null ? "—" : data.temperature.toFixed(1) + " °C";
+          els.flame.textContent = data.flame;
+          els.updated.textContent = new Date().toLocaleTimeString();
+        } catch (e) {
+          addLog("Unreadable telemetry");
+        }
+      }
+    });
+  })();
+</script>
+</body>
+</html>
